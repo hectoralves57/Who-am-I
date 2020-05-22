@@ -7,20 +7,11 @@
 
 body {
     background-image: url('../img/nasa.jpg');
-    background-size: 100vw auto;
+    background-size: 150vh auto;
     background-attachment: fixed;
     font-family: Arial;
-    font-size: 18px;
-    height: 100vh;
-}
-
-
-/* se a tela tiver pelo menos 400 pixel carrega esses estilos*/
-
-@media (min-width: 400px) {
-    body{
-        font-size: 14px;
-    }
+    font-size: 12px;
+    
 }
 
 header {
@@ -29,43 +20,196 @@ header {
     justify-content: center;      
 }
 
+/* se a tela tiver pelo menos 400 pixel carrega esses estilos*/
+
+@media (min-width: 400px){
+    .Title,
+    .Sub-title {
+        font-size: 2.5em;
+    }
+    .Sub-title{
+        justify-content: space-between;
+    }
+    .menu a {
+       font-size: 1.2em;
+    }
+    div{
+        min-height: 200px;
+    }
+}
+
+@media (min-width: 699px){
+/*body{
+    background-size: auto 100vw;
+}*/
+div{
+    max-height: 201px;
+}
+}
+@media (min-width: 1150px){
+    body{
+        background-size: auto 100vw;
+    }
+    /*.menu a {
+        font-size: 3em;
+    }*/
+}
+
 div {
     margin-top: 26vh;
     align-content: center;
-    font-size: 2em; 
+    font-size: 1.7em; 
     max-height: 150px;
     background-color: rgba(145, 168, 199, 0.55);
     color: #fbf4f4;
-    border-radius: 1.5em;
+    border-radius: 3em;
     padding: 1em;
    /* #f5e5e5 ou #362b33 cor para a letra */
     
 }
 
+.top{
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 0px;
+    align-items: start;
+    justify-items: left;
+}
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    margin-top: 0px;
+    text-decoration: none;
+    color: #fbf4f4;
+    transition: background-color 0.5s;
+}
 
+@media (max-width: 359px){
+    .menu a{
+        font-size: 0.8em;
+    }
+}
 
+.inicio a:hover,
+.menu a:hover{
+    background-color: rgb(29, 27, 27);
+    
+}
 .menu {
     background-color: rgb(139, 137, 137);
     position: fixed;
     width: 100vw;
+    
 }
 
 .menu ul {
     display: flex;
     justify-content: space-around;
-        
+}
+
+.inicio {
+    margin-top: 30px;
+    background-color: rgb(74, 71, 82);
+    border-radius: 1em;
+    font-size: 3em;
+    max-height: 35px;
+    position: fixed;
+    align-self: center;
+    margin-left: 48vw;
+    
+}
+
+.inicio a{
+    transition: background-color 0.5s;
+    text-decoration: none;
+    color: whitesmoke;
+    border-radius: 1em;
+    max-height: 30px;
+}
+
+@media (max-width: 650px){
+    .inicio{
+        margin-left: 46vw;
+    }
+}
+
+/*Fim dos estilos da capa inicial*/
+
+section {
+    background-color: rgba(44, 49, 54, 0.603);
+    margin: 10px;
+    padding-bottom: 15px;
+}
+
+section h2{
+    color: whitesmoke;
+    font-size: 2em;
+    margin-left: 10vw;
+    margin-top: 25px;
+    padding-top: 1em;
+    text-align: start;
 }
 
 .img-portfolio{
-    height: 25vh;
-    width: auto;
-    align-content: center;
+    height: auto;
+    width: 45vw;
+    border-radius: 2em;
 }
 
-.menu a {
-    display: block;
-    padding: 10px 20px;
-    margin-top: 0px;
+section{
+    text-align: center;
+    color: rgb(185, 181, 181);
+    margin-top: 2em;
 }
 
+section p{
+    font-size: 1.3em;
+}
 
+@media (min-width: 600px){
+    .menu a {
+        font-size: 1.6em;
+    }
+    section p{
+        font-size: 3em;
+        
+    }
+    .img-portfolio{
+        text-align: end;
+        margin: 2vh;
+    }
+    section h2{
+        font-size: 5em;
+    }
+    .esquerda{
+        float: left;
+    }
+
+    .FEA-PUC,
+    .direita{
+        float: right;
+    }
+    
+    .Hobby{
+        padding-bottom: 10vh;
+        
+    }
+}
+
+@media (min-width: 1000px){
+    .Habil{
+        padding-bottom: 5vh;
+        
+    }
+}
+
+@media (min-width: 1150px){
+    .Habil{
+        padding-bottom: 30vh;
+        
+    }
+    
+}
+
+p{
+    margin-bottom: 3vh;
+}
